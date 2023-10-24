@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Обратная связь и Аутентификация</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="form-container">
+        <h2>Обратная связь</h2>
+        <form action="https://httpbin.org/post" method="post" class="form">
+          <label for="name">ФИО:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label>Откуда узнали о нас:</label>
+          <label for="radio-online"
+            >Онлайн
+            <input
+              type="radio"
+              id="radio-online"
+              name="source"
+              value="online"
+            />
+          </label>
+          <label for="radio-radio"
+            >Радио
+            <input type="radio" id="radio-radio" name="source" value="radio" />
+          </label>
+
+          <label for="type">Тип обращения:</label>
+          <select id="type" name="type">
+            <option value="complaint">Жалоба</option>
+            <option value="suggestion">Предложение</option>
+          </select>
+
+          <label for="message">Текст сообщения:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <label for="attachment">Вложения:</label>
+          <input type="file" id="attachment" name="attachment" />
+
+          <label for="consent"
+            >Согласие на обработку персональных данных:
+            <input type="checkbox" id="consent" name="consent" required />
+          </label>
+
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="form-container">
+        <h2>Аутентификация</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <label for="login">Логин:</label>
+          <input type="text" id="login" name="login" required />
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="remember"
+            >Запомнить меня:
+            <input type="checkbox" id="remember" name="remember" />
+          </label>
+
+          <button type="submit">Войти</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
