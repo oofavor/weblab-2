@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Обратная связь и Аутентификация</title>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="form-container">
+        <h2>Аутентификация</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <label for="login">Логин:</label>
+          <input type="text" id="login" name="login" required />
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="remember"
+            >Запомнить меня:
+            <input type="checkbox" id="remember" name="remember" />
+          </label>
+
+          <button type="submit">Войти</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
